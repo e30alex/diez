@@ -54,14 +54,14 @@ const binding: WebBinding<Typograph> = {
       'font-family': fontFamily,
       'font-weight': instance.font.weight.toString(),
       'font-style': instance.font.style.toString(),
-      'font-size': `${instance.fontSize}px`,
+      'font-size': `${instance.fontSize}rem`,
       color: colorValue,
-      'letter-spacing': `${instance.letterSpacing}px`,
+      'letter-spacing': `${instance.letterSpacing}rem`,
       'text-align': textAlignmentToCss(instance.alignment),
       'text-decoration': textDecorationsToCss(instance.decoration),
     };
     if (instance.lineHeight !== -1) {
-      Object.assign(declaration, {'line-height': `${instance.lineHeight}px`});
+      Object.assign(declaration, {'line-height': `${instance.lineHeight}rem`});
     }
     output.styleSheet.styles.insertRule({
       declaration,
